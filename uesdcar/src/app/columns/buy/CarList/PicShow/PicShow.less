@@ -1,0 +1,283 @@
+.PicShowcontainer{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color: black;
+
+	*{
+		/*加下面的语句的目的是为了防止将来antd样式表冲突*/
+		box-sizing:border-box !important;
+		margin:0;
+		padding:0;
+	}
+	
+	@sideboxWidth : 340px;
+	.sidebox{
+		width:@sideboxWidth;
+		padding:20px;
+ 		height:100%;
+		position: absolute;
+		right:0;
+		top:0;
+
+		.infobox{
+			h3{
+				font-size: 26px;
+				color:white;
+				font-weight: bold;
+
+				small{
+					font-size: 16px;
+				}
+			}
+			.info{
+				color:white;
+				font-size: 16px;
+				line-height: 30px;
+			}
+		}
+
+		.albumchoose{
+			color:white;
+			padding-top:10px;
+			overflow: hidden;
+
+			ul{
+				list-style: none;
+
+				li{
+					float: left;
+					width:145px;
+					height:50px;
+					background-color: #eee;
+					float: left;
+					margin-right: 10px;
+					margin-bottom: 10px;
+					line-height: 50px;
+					text-align: center;
+					color:#333;
+					font-size: 15px;
+					cursor: pointer;
+
+					&:nth-child(2n){
+						margin-right: 0;
+					}
+
+					&.cur{
+						background-color: gold;
+						color:#333;
+					}
+					 
+				}
+			}
+		}
+
+		.carlikebox{
+			margin-top: 10px;
+			height:100px;
+			width:100%;
+			position: relative;
+			border:1px solid #333;
+			overflow:hidden;
+			 
+
+			ul{
+				list-style: none;
+				position:relative;
+
+				li{
+					line-height: 24px;
+					color:white;
+					font-size: 14px;
+					padding-left: 10px;
+					cursor: pointer;
+
+					&:hover{
+						background-color: #333;
+					};
+
+					&.cur{
+						background-color: gold;
+						color:#333;
+					}
+				}
+			}
+
+			.bar{
+				position: absolute;
+				right:0;
+				top:0;
+				width:18px;
+				height:100%;
+				background-color: #333;
+
+				b{
+					position: absolute;
+					top:0;
+					left:0;
+					width:18px;
+					height:10px;
+					background-color: gold;
+				}
+			}
+		}
+
+		.smallpicnavbox{
+			margin-top: 15px;
+			overflow: hidden;
+			height:260px;
+
+			.unit{
+				position: relative;
+				width:9999px;
+				overflow: hidden;
+				height:220px;
+
+				ul{
+					list-style: none;
+					width:300px;
+					float: left;
+					margin-right: 10px;
+					overflow: hidden;
+
+					li{
+						width:145px;
+						height:100px;
+						float: left;
+						margin-right: 10px;
+						margin-bottom: 10px;
+						position: relative;
+						
+						&:nth-child(2n){
+							margin-right: 0;
+						}
+
+						img{
+							width:145px;
+							height:100px;
+						}
+
+						&::before{
+							content:"";
+							position: absolute;
+							top:0;
+							left:0;
+							width:100%;
+							height:100%;
+							background-color: rgba(0,0,0,.6);
+							transition:all 0.5s ease 0s;
+						}
+
+						&.cur::before{
+							background-color: rgba(0,0,0,0);
+						}
+					}
+				}
+			}
+
+			.navbar{
+				width:100%;
+				height:18px;
+
+				span{
+					float: left;
+					
+					height:12px;
+					background-color: #eee;
+					margin-right: 6px;
+
+					&:last-child{
+						margin-right: 0;
+					}
+
+					&.cur{
+						background-color: gold;
+					}
+				}
+			}
+		}
+	}
+
+	.bigimgbox{
+		padding-right: @sideboxWidth;
+		height:100%;
+
+		.inner{
+			position: relative;
+			height:100%;
+			.bigimg{
+				position: absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50% , -50%);
+				width:1200px;
+				max-width: 90%;
+				max-height:90%;
+			}
+
+			.loading{
+				width:100px;
+				height:100px;
+				background-image: url(/images/loading.svg);
+				position: absolute;
+				top:50%;
+				left:50%;
+				transform:translate(-50% , -50%);
+				z-index: 999;
+			}
+
+			.leftBtn{
+				position: absolute;
+				width:50%;
+				height:100%;
+				top:0;
+				left:0;
+				cursor: url(/images/picture-cursor-left.cur),auto;
+			}
+			.rightBtn{
+				position: absolute;
+				width:50%;
+				height:100%;
+				top:0;
+				right:0;
+				cursor: url(/images/picture-cursor-right.cur),auto;
+			}
+
+			.picnumber{
+				position: absolute;
+				bottom:60px;
+				left:0;
+				width:160px;
+				height:60px;
+				background-color: rgba(0,0,0,.6);
+				border-radius: 0 10px 10px 0;
+				color:white;
+				text-align: center;
+				line-height: 60px;
+				font-size: 30px;
+			}
+
+			.autoplay{
+				position: absolute;
+				top:60px;
+				left:0;
+				width:100px;
+				height:60px;
+				background-color: rgba(0,0,0,.6);
+				border-radius: 0 10px 10px 0;
+				color:white;
+				text-align: center;
+				line-height: 60px;
+				font-size: 30px;
+
+				img{
+					width:40px;
+					position: relative;
+					top: 10px;
+				}
+			}
+		}
+	}
+}
