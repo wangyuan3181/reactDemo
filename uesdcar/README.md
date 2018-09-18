@@ -25,12 +25,13 @@ React + Dva + Webpack +ant-design + Node.js + Mongodb + ES6
 
 过滤器
 
-![](uesdcar/assets/shaixuan.gif)
+<img src="https://github.com/wangyuan3181/reactDemo/blob/master/uesdcar/assets/shaixuan.gif" width="900" height="600"/>
+
 
 表单
 
-![](uesdcar/assets/addcar.gif)
+<img src="https://github.com/wangyuan3181/reactDemo/blob/master/uesdcar/assets/addcar.gif" width="900" height="600"/>
 
 图片上传
 
-![](uesdcar/assets/uploads.gif)
+<img src="https://github.com/wangyuan3181/reactDemo/blob/master/uesdcar/assets/uploads.gif" width="900" height="600"/>
